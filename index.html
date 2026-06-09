@@ -1,0 +1,40 @@
+<!DOCTYPE html><html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Aplikasi Inovasi Pegawai</title><link rel="stylesheet" href="style.css"><script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script><script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script></head>
+<body><h2>Aplikasi Inovasi dan Permasalahan Pegawai</h2>
+<div id="dashboard" class="dashboard"></div>
+<div class="card">
+
+<h3>Data Pegawai</h3>
+<input id="nip" placeholder="NIP">
+<input id="nama" placeholder="Nama">
+<input id="tempatTugas" placeholder="Tempat Tugas">
+<input id="jabatan" placeholder="Jabatan">
+<h3>Data Inovasi</h3><input id="judul" placeholder="Judul Inovasi"><select id="kategori">
+<option value="">Pilih Kategori</option>
+<option>Digitalisasi</option>
+<option>Pelayanan</option>
+<option>Administrasi</option>
+<option>Pengawasan</option>
+<option>Kepegawaian</option>
+</select><textarea id="dasarHukum" placeholder="Dasar Hukum"></textarea><textarea id="latarBelakang" placeholder="Latar Belakang"></textarea><textarea id="deskripsi" placeholder="Deskripsi"></textarea><textarea id="tujuan" placeholder="Tujuan"></textarea><button onclick="ajukan()">AJUKAN</button>
+
+</div><div class="toolbar">
+<button onclick="loadData()">Refresh</button>
+
+</div><table>
+<thead>
+<tr>
+<th>NIP</th>
+<th>Nama</th>
+<th>Judul</th>
+<th>Kategori</th>
+<th>Status</th>
+<th>Aksi</th>
+</tr>
+</thead>
+<tbody id="output"></tbody>
+</table><script src="app.js"></script></body>
+</html>
